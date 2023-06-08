@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F05C1B962A305FC90008AC66 /* errorCorrectCodeTest.c in Sources */ = {isa = PBXBuildFile; fileRef = F05C1B952A305FC90008AC66 /* errorCorrectCodeTest.c */; };
+		F05C1B992A31EDD70008AC66 /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = F05C1B982A31EDD70008AC66 /* encoding.c */; };
+		F06351F02A1651E000203E85 /* calculation.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351EF2A1651E000203E85 /* calculation.c */; };
+		F06351F22A16527000203E85 /* read_files.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351F12A16527000203E85 /* read_files.c */; };
+		F06351F42A1652BE00203E85 /* berVec.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351F32A1652BE00203E85 /* berVec.c */; };
+		F085831E2A1711D200E03905 /* keyGenAndED.c in Sources */ = {isa = PBXBuildFile; fileRef = F085831D2A1711D200E03905 /* keyGenAndED.c */; };
+		F08583212A1721F500E03905 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = F08583202A1721F500E03905 /* test.c */; };
+		F0958A0A2A1616E00041F76C /* EncAndDec.c in Sources */ = {isa = PBXBuildFile; fileRef = F0958A092A1616E00041F76C /* EncAndDec.c */; };
 		F0FB4B512A0DD76400EEFA7F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F0FB4B502A0DD76400EEFA7F /* main.c */; };
+		F0FB4B592A0DD96900EEFA7F /* PubKeyGen.c in Sources */ = {isa = PBXBuildFile; fileRef = F0FB4B582A0DD96900EEFA7F /* PubKeyGen.c */; };
+		F0FB4B5E2A0DDC7900EEFA7F /* PRNG_Seed.c in Sources */ = {isa = PBXBuildFile; fileRef = F0FB4B5D2A0DDC7900EEFA7F /* PRNG_Seed.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +33,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F05C1B942A305FC90008AC66 /* errorCorrectCodeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = errorCorrectCodeTest.h; sourceTree = "<group>"; };
+		F05C1B952A305FC90008AC66 /* errorCorrectCodeTest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = errorCorrectCodeTest.c; sourceTree = "<group>"; };
+		F05C1B972A31EDD70008AC66 /* encoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = encoding.h; sourceTree = "<group>"; };
+		F05C1B982A31EDD70008AC66 /* encoding.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = encoding.c; sourceTree = "<group>"; };
+		F06351EF2A1651E000203E85 /* calculation.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = calculation.c; sourceTree = "<group>"; };
+		F06351F12A16527000203E85 /* read_files.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = read_files.c; sourceTree = "<group>"; };
+		F06351F32A1652BE00203E85 /* berVec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = berVec.c; sourceTree = "<group>"; };
+		F085831C2A1711D200E03905 /* keyGenAndED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = keyGenAndED.h; sourceTree = "<group>"; };
+		F085831D2A1711D200E03905 /* keyGenAndED.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = keyGenAndED.c; sourceTree = "<group>"; };
+		F085831F2A1721F500E03905 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		F08583202A1721F500E03905 /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
+		F0958A082A1616E00041F76C /* EncAndDec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncAndDec.h; sourceTree = "<group>"; };
+		F0958A092A1616E00041F76C /* EncAndDec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EncAndDec.c; sourceTree = "<group>"; };
+		F0958A0B2A164C5F0041F76C /* calculation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculation.h; sourceTree = "<group>"; };
 		F0FB4B4D2A0DD76400EEFA7F /* LPN */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LPN; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FB4B502A0DD76400EEFA7F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F0FB4B572A0DD96900EEFA7F /* PubKeyGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PubKeyGen.h; sourceTree = "<group>"; };
+		F0FB4B582A0DD96900EEFA7F /* PubKeyGen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PubKeyGen.c; sourceTree = "<group>"; };
+		F0FB4B5A2A0DD9A800EEFA7F /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		F0FB4B5B2A0DDA1F00EEFA7F /* berVec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = berVec.h; sourceTree = "<group>"; };
+		F0FB4B5C2A0DDC7900EEFA7F /* PRNG_Seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRNG_Seed.h; sourceTree = "<group>"; };
+		F0FB4B5D2A0DDC7900EEFA7F /* PRNG_Seed.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PRNG_Seed.c; sourceTree = "<group>"; };
+		F0FB4B5F2A0DE0C500EEFA7F /* read_files.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = read_files.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,10 +69,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F05C1B932A305F910008AC66 /* errorCorrCode */ = {
+			isa = PBXGroup;
+			children = (
+				F05C1B942A305FC90008AC66 /* errorCorrectCodeTest.h */,
+				F05C1B952A305FC90008AC66 /* errorCorrectCodeTest.c */,
+				F05C1B972A31EDD70008AC66 /* encoding.h */,
+				F05C1B982A31EDD70008AC66 /* encoding.c */,
+			);
+			path = errorCorrCode;
+			sourceTree = "<group>";
+		};
 		F0FB4B442A0DD76400EEFA7F = {
 			isa = PBXGroup;
 			children = (
-				F0FB4B4F2A0DD76400EEFA7F /* LPN */,
+				F05C1B932A305F910008AC66 /* errorCorrCode */,
+				F085831C2A1711D200E03905 /* keyGenAndED.h */,
+				F085831D2A1711D200E03905 /* keyGenAndED.c */,
+				F0FB4B5F2A0DE0C500EEFA7F /* read_files.h */,
+				F06351F12A16527000203E85 /* read_files.c */,
+				F0FB4B5C2A0DDC7900EEFA7F /* PRNG_Seed.h */,
+				F0FB4B5D2A0DDC7900EEFA7F /* PRNG_Seed.c */,
+				F0FB4B5B2A0DDA1F00EEFA7F /* berVec.h */,
+				F06351F32A1652BE00203E85 /* berVec.c */,
+				F0FB4B572A0DD96900EEFA7F /* PubKeyGen.h */,
+				F0FB4B582A0DD96900EEFA7F /* PubKeyGen.c */,
+				F0958A082A1616E00041F76C /* EncAndDec.h */,
+				F0958A092A1616E00041F76C /* EncAndDec.c */,
+				F0FB4B502A0DD76400EEFA7F /* main.c */,
+				F0FB4B5A2A0DD9A800EEFA7F /* config.h */,
+				F0958A0B2A164C5F0041F76C /* calculation.h */,
+				F06351EF2A1651E000203E85 /* calculation.c */,
+				F085831F2A1721F500E03905 /* test.h */,
+				F08583202A1721F500E03905 /* test.c */,
 				F0FB4B4E2A0DD76400EEFA7F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,14 +112,6 @@
 				F0FB4B4D2A0DD76400EEFA7F /* LPN */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F0FB4B4F2A0DD76400EEFA7F /* LPN */ = {
-			isa = PBXGroup;
-			children = (
-				F0FB4B502A0DD76400EEFA7F /* main.c */,
-			);
-			path = LPN;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +171,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FB4B5E2A0DDC7900EEFA7F /* PRNG_Seed.c in Sources */,
+				F06351F22A16527000203E85 /* read_files.c in Sources */,
+				F05C1B962A305FC90008AC66 /* errorCorrectCodeTest.c in Sources */,
+				F0958A0A2A1616E00041F76C /* EncAndDec.c in Sources */,
+				F05C1B992A31EDD70008AC66 /* encoding.c in Sources */,
+				F08583212A1721F500E03905 /* test.c in Sources */,
+				F0FB4B592A0DD96900EEFA7F /* PubKeyGen.c in Sources */,
 				F0FB4B512A0DD76400EEFA7F /* main.c in Sources */,
+				F085831E2A1711D200E03905 /* keyGenAndED.c in Sources */,
+				F06351F42A1652BE00203E85 /* berVec.c in Sources */,
+				F06351F02A1651E000203E85 /* calculation.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +238,26 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/openblas/0.3.23/include,
+					"/opt/homebrew/Cellar/openssl@1.1/1.1.1l/include",
+					"/opt/homebrew/opt/openssl@3/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/Cellar/openssl@3/3.1.0/lib/**",
+					/opt/homebrew/Cellar/openblas/0.3.23/lib,
+					"/opt/homebrew/opt/openssl@3/lib",
+					"$(inherited)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+					"-L/opt/homebrew/Cellar/openssl@1.1/1.1.1l/lib",
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -228,9 +306,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/openblas/0.3.23/include,
+					"/opt/homebrew/Cellar/openssl@1.1/1.1.1l/include",
+					"/opt/homebrew/opt/openssl@3/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/Cellar/openssl@3/3.1.0/lib/**",
+					/opt/homebrew/Cellar/openblas/0.3.23/lib,
+					"/opt/homebrew/opt/openssl@3/lib",
+					"$(inherited)",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 12.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+					"-L/opt/homebrew/Cellar/openssl@1.1/1.1.1l/lib",
+				);
 				SDKROOT = macosx;
 			};
 			name = Release;
