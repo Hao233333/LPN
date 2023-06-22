@@ -200,6 +200,7 @@ encode_data (unsigned char msg[], int nbytes, unsigned char dst[])
 //}
 
 
+
 /* Main test function */
 //int main() {
 //    /* Initialize ECC */

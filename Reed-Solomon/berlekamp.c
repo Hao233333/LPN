@@ -69,6 +69,7 @@ Modified_Berlekamp_Massey (void)
   /* initialize Gamma, the erasure locator polynomial */
   init_gamma(gamma);
 
+    
   /* initialize to z */
   copy_poly(D, gamma);
   mul_z_poly(D);

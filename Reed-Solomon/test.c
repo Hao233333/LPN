@@ -168,6 +168,7 @@ main (int argc, char *argv[])
           }
       }
   }
+    
 
   if (fails == 0) {
       printf("\n\n All Tests Passed: No failures to correct codeword\n");

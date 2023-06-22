@@ -4,6 +4,7 @@
 #include "rs.h"
 
 
+
 //clang -o test mutiErrorsTest.c rs.c galois.c crcgen.c berlekamp.c -I/opt/homebrew/opt/openssl@3/include -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
 
 //./test

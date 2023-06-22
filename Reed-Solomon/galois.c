@@ -95,6 +95,7 @@ init_exp_table (void)
   }
 }
 
+
 /* multiplication using logarithms */
 int gmult(int a, int b)
 {

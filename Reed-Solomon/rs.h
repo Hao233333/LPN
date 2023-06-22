@@ -40,6 +40,7 @@
   if you use more than a reasonably small number of parity bytes.
   (say, 10 or 20)
 
+ 
   ****************************************************************/
 
 #define NPAR 6
