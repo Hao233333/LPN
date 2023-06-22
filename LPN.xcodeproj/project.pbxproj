@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0352F212A42ABB200D6544A /* mutiErrorsTest.c in Sources */ = {isa = PBXBuildFile; fileRef = F0352F202A42ABB200D6544A /* mutiErrorsTest.c */; };
+		F057AD822A3F0DAD004462D5 /* rs.c in Sources */ = {isa = PBXBuildFile; fileRef = F057AD812A3F0DAD004462D5 /* rs.c */; };
+		F057AD842A3F132A004462D5 /* galois.c in Sources */ = {isa = PBXBuildFile; fileRef = F057AD832A3F132A004462D5 /* galois.c */; };
+		F057AD862A3F1358004462D5 /* crcgen.c in Sources */ = {isa = PBXBuildFile; fileRef = F057AD852A3F1358004462D5 /* crcgen.c */; };
+		F057AD882A3F138C004462D5 /* berlekamp.c in Sources */ = {isa = PBXBuildFile; fileRef = F057AD872A3F138C004462D5 /* berlekamp.c */; };
+		F057AD8A2A3F1B90004462D5 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = F057AD892A3F1B90004462D5 /* test.c */; };
 		F05C1B962A305FC90008AC66 /* errorCorrectCodeTest.c in Sources */ = {isa = PBXBuildFile; fileRef = F05C1B952A305FC90008AC66 /* errorCorrectCodeTest.c */; };
 		F05C1B992A31EDD70008AC66 /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = F05C1B982A31EDD70008AC66 /* encoding.c */; };
 		F06351F02A1651E000203E85 /* calculation.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351EF2A1651E000203E85 /* calculation.c */; };
@@ -33,6 +39,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F0352F202A42ABB200D6544A /* mutiErrorsTest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mutiErrorsTest.c; sourceTree = "<group>"; };
+		F057AD802A3F0DAD004462D5 /* rs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rs.h; sourceTree = "<group>"; };
+		F057AD812A3F0DAD004462D5 /* rs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = rs.c; sourceTree = "<group>"; };
+		F057AD832A3F132A004462D5 /* galois.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = galois.c; sourceTree = "<group>"; };
+		F057AD852A3F1358004462D5 /* crcgen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = crcgen.c; sourceTree = "<group>"; };
+		F057AD872A3F138C004462D5 /* berlekamp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = berlekamp.c; sourceTree = "<group>"; };
+		F057AD892A3F1B90004462D5 /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
 		F05C1B942A305FC90008AC66 /* errorCorrectCodeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = errorCorrectCodeTest.h; sourceTree = "<group>"; };
 		F05C1B952A305FC90008AC66 /* errorCorrectCodeTest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = errorCorrectCodeTest.c; sourceTree = "<group>"; };
 		F05C1B972A31EDD70008AC66 /* encoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = encoding.h; sourceTree = "<group>"; };
@@ -69,6 +82,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F057AD7F2A3F0D81004462D5 /* Reed-Solomon */ = {
+			isa = PBXGroup;
+			children = (
+				F057AD802A3F0DAD004462D5 /* rs.h */,
+				F057AD812A3F0DAD004462D5 /* rs.c */,
+				F057AD832A3F132A004462D5 /* galois.c */,
+				F057AD852A3F1358004462D5 /* crcgen.c */,
+				F057AD872A3F138C004462D5 /* berlekamp.c */,
+				F057AD892A3F1B90004462D5 /* test.c */,
+				F0352F202A42ABB200D6544A /* mutiErrorsTest.c */,
+			);
+			path = "Reed-Solomon";
+			sourceTree = "<group>";
+		};
 		F05C1B932A305F910008AC66 /* errorCorrCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,7 @@
 		F0FB4B442A0DD76400EEFA7F = {
 			isa = PBXGroup;
 			children = (
+				F057AD7F2A3F0D81004462D5 /* Reed-Solomon */,
 				F05C1B932A305F910008AC66 /* errorCorrCode */,
 				F085831C2A1711D200E03905 /* keyGenAndED.h */,
 				F085831D2A1711D200E03905 /* keyGenAndED.c */,
@@ -172,14 +200,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0FB4B5E2A0DDC7900EEFA7F /* PRNG_Seed.c in Sources */,
+				F057AD862A3F1358004462D5 /* crcgen.c in Sources */,
 				F06351F22A16527000203E85 /* read_files.c in Sources */,
+				F057AD882A3F138C004462D5 /* berlekamp.c in Sources */,
 				F05C1B962A305FC90008AC66 /* errorCorrectCodeTest.c in Sources */,
 				F0958A0A2A1616E00041F76C /* EncAndDec.c in Sources */,
 				F05C1B992A31EDD70008AC66 /* encoding.c in Sources */,
+				F057AD8A2A3F1B90004462D5 /* test.c in Sources */,
 				F08583212A1721F500E03905 /* test.c in Sources */,
+				F057AD822A3F0DAD004462D5 /* rs.c in Sources */,
 				F0FB4B592A0DD96900EEFA7F /* PubKeyGen.c in Sources */,
 				F0FB4B512A0DD76400EEFA7F /* main.c in Sources */,
+				F057AD842A3F132A004462D5 /* galois.c in Sources */,
 				F085831E2A1711D200E03905 /* keyGenAndED.c in Sources */,
+				F0352F212A42ABB200D6544A /* mutiErrorsTest.c in Sources */,
 				F06351F42A1652BE00203E85 /* berVec.c in Sources */,
 				F06351F02A1651E000203E85 /* calculation.c in Sources */,
 			);
