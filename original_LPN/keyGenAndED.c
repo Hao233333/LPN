@@ -251,5 +251,4 @@ int PubKeyGenAndED(void) {
 
     return memcmp(decryption, vector_v, M) == 0;
 
-
 }

@@ -68,11 +68,11 @@ main (int argc, char *argv[])
 
    //add errors
       
-      
+
     //error 1
       
       // Choose a specific location to introduce an error
-      int specific_loc = 5;  // Change this to the desired location
+      int specific_loc = 2;  // Change this to the desired location
       print_inverse_hex(specific_loc, msg);
       unsigned char specific_inverse = msg[specific_loc] ^ 0xFF;
 
@@ -83,7 +83,7 @@ main (int argc, char *argv[])
 
 
     //error 2
-      int specific_loc2 = 8;  // Change this to the desired location
+      int specific_loc2 = 28;  // Change this to the desired location
       print_inverse_hex(specific_loc2, msg);
       unsigned char specific_inverse2 = msg[specific_loc2] ^ 0xFF;
 
@@ -94,7 +94,7 @@ main (int argc, char *argv[])
       //print_word(ML, codeword);
       
     //error 3
-      int specific_loc3 = 10;  // Change this to the desired location
+      int specific_loc3 = 29;  // Change this to the desired location
       print_inverse_hex(specific_loc3, msg);
       unsigned char specific_inverse3 = msg[specific_loc3] ^ 0xFF;
 
