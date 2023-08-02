@@ -10,7 +10,7 @@
 
 #define N_VALUE 50
 #define M_VALUE 100
-#define R_VALUE 0.01
+#define R_VALUE 0.1
 
 
 

@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F013E4762A677743004536A2 /* testBer.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E4752A677743004536A2 /* testBer.c */; };
+		F013E49E2A6F6F7C004536A2 /* SeedGen.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E4922A6F6F7B004536A2 /* SeedGen.c */; };
+		F013E49F2A6F6F7C004536A2 /* CCASystem.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E4972A6F6F7B004536A2 /* CCASystem.c */; };
+		F013E4A02A6F6F7C004536A2 /* BerParameter.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E4982A6F6F7B004536A2 /* BerParameter.c */; };
+		F013E4A12A6F6F7C004536A2 /* bch.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E4992A6F6F7B004536A2 /* bch.c */; };
+		F013E4A22A6F6F7C004536A2 /* read_files.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E49A2A6F6F7C004536A2 /* read_files.c */; };
+		F013E4A32A6F6F7C004536A2 /* calculation.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E49D2A6F6F7C004536A2 /* calculation.c */; };
+		F013E4A52A6F6FAE004536A2 /* seedtest.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E4A42A6F6FAE004536A2 /* seedtest.c */; };
+		F013E4D12A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4AA2A73CF1A004536A2 /* LPN_Oracle.cpp */; };
+		F013E4D22A73CF1A004536A2 /* BKW-reduction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4AD2A73CF1A004536A2 /* BKW-reduction.cpp */; };
+		F013E4D32A73CF1A004536A2 /* Prange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4B02A73CF1A004536A2 /* Prange.cpp */; };
+		F013E4D42A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4B22A73CF1A004536A2 /* LPN_Oracle.cpp */; };
+		F013E4D52A73CF1A004536A2 /* Matrixoperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4B72A73CF1A004536A2 /* Matrixoperations.cpp */; };
+		F013E4D62A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4BA2A73CF1A004536A2 /* LPN_Oracle.cpp */; };
+		F013E4D72A73CF1A004536A2 /* MMT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4BC2A73CF1A004536A2 /* MMT.cpp */; };
+		F013E4D82A73CF1A004536A2 /* Permutation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4BD2A73CF1A004536A2 /* Permutation.cpp */; };
+		F013E4D92A73CF1A004536A2 /* Matrixoperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4C02A73CF1A004536A2 /* Matrixoperations.cpp */; };
+		F013E4DA2A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4C32A73CF1A004536A2 /* LPN_Oracle.cpp */; };
+		F013E4DB2A73CF1A004536A2 /* MMT.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4C52A73CF1A004536A2 /* MMT.cpp */; };
+		F013E4DC2A73CF1A004536A2 /* Permutation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4C62A73CF1A004536A2 /* Permutation.cpp */; };
+		F013E4DD2A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4CE2A73CF1A004536A2 /* LPN_Oracle.cpp */; };
+		F013E4DE2A73CF1A004536A2 /* Sampling_Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F013E4D02A73CF1A004536A2 /* Sampling_Test.cpp */; };
+		F013E4E02A78B99F004536A2 /* test1.c in Sources */ = {isa = PBXBuildFile; fileRef = F013E4DF2A78B99F004536A2 /* test1.c */; };
 		F0352F212A42ABB200D6544A /* mutiErrorsTest.c in Sources */ = {isa = PBXBuildFile; fileRef = F0352F202A42ABB200D6544A /* mutiErrorsTest.c */; };
 		F0352F252A4CF9E700D6544A /* bch_codec.c in Sources */ = {isa = PBXBuildFile; fileRef = F0352F242A4CF9E700D6544A /* bch_codec.c */; };
 		F0352F272A4CFA4100D6544A /* BCHtest.c in Sources */ = {isa = PBXBuildFile; fileRef = F0352F262A4CFA4100D6544A /* BCHtest.c */; };
@@ -24,6 +47,7 @@
 		F06351F22A16527000203E85 /* read_files.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351F12A16527000203E85 /* read_files.c */; };
 		F06351F42A1652BE00203E85 /* berVec.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351F32A1652BE00203E85 /* berVec.c */; };
 		F06F45C92A61634C001598E5 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = F06F45C82A61634C001598E5 /* test.c */; };
+		F06F45CB2A6623FE001598E5 /* testForPy.c in Sources */ = {isa = PBXBuildFile; fileRef = F06F45CA2A6623FE001598E5 /* testForPy.c */; };
 		F085831E2A1711D200E03905 /* keyGenAndED.c in Sources */ = {isa = PBXBuildFile; fileRef = F085831D2A1711D200E03905 /* keyGenAndED.c */; };
 		F08583212A1721F500E03905 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = F08583202A1721F500E03905 /* test.c */; };
 		F0958A0A2A1616E00041F76C /* EncAndDec.c in Sources */ = {isa = PBXBuildFile; fileRef = F0958A092A1616E00041F76C /* EncAndDec.c */; };
@@ -51,6 +75,57 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F013E4752A677743004536A2 /* testBer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testBer.c; sourceTree = "<group>"; };
+		F013E4912A6F6F7B004536A2 /* CCASystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCASystem.h; sourceTree = "<group>"; };
+		F013E4922A6F6F7B004536A2 /* SeedGen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SeedGen.c; sourceTree = "<group>"; };
+		F013E4932A6F6F7B004536A2 /* bch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bch.h; sourceTree = "<group>"; };
+		F013E4942A6F6F7B004536A2 /* SeedGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedGen.h; sourceTree = "<group>"; };
+		F013E4952A6F6F7B004536A2 /* read_files.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = read_files.h; sourceTree = "<group>"; };
+		F013E4962A6F6F7B004536A2 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		F013E4972A6F6F7B004536A2 /* CCASystem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CCASystem.c; sourceTree = "<group>"; };
+		F013E4982A6F6F7B004536A2 /* BerParameter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BerParameter.c; sourceTree = "<group>"; };
+		F013E4992A6F6F7B004536A2 /* bch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bch.c; sourceTree = "<group>"; };
+		F013E49A2A6F6F7C004536A2 /* read_files.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_files.c; sourceTree = "<group>"; };
+		F013E49B2A6F6F7C004536A2 /* calculation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = calculation.h; sourceTree = "<group>"; };
+		F013E49C2A6F6F7C004536A2 /* BerParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BerParameter.h; sourceTree = "<group>"; };
+		F013E49D2A6F6F7C004536A2 /* calculation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = calculation.c; sourceTree = "<group>"; };
+		F013E4A42A6F6FAE004536A2 /* seedtest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = seedtest.c; sourceTree = "<group>"; };
+		F013E4A92A73CF1A004536A2 /* LPN_Oracle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPN_Oracle.h; sourceTree = "<group>"; };
+		F013E4AA2A73CF1A004536A2 /* LPN_Oracle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LPN_Oracle.cpp; sourceTree = "<group>"; };
+		F013E4AB2A73CF1A004536A2 /* BKW-reduction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BKW-reduction.h"; sourceTree = "<group>"; };
+		F013E4AC2A73CF1A004536A2 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F013E4AD2A73CF1A004536A2 /* BKW-reduction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "BKW-reduction.cpp"; sourceTree = "<group>"; };
+		F013E4AF2A73CF1A004536A2 /* Prange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prange.h; sourceTree = "<group>"; };
+		F013E4B02A73CF1A004536A2 /* Prange.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Prange.cpp; sourceTree = "<group>"; };
+		F013E4B12A73CF1A004536A2 /* LPN_Oracle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPN_Oracle.h; sourceTree = "<group>"; };
+		F013E4B22A73CF1A004536A2 /* LPN_Oracle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LPN_Oracle.cpp; sourceTree = "<group>"; };
+		F013E4B32A73CF1A004536A2 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F013E4B62A73CF1A004536A2 /* Matrixoperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrixoperations.h; sourceTree = "<group>"; };
+		F013E4B72A73CF1A004536A2 /* Matrixoperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrixoperations.cpp; sourceTree = "<group>"; };
+		F013E4B82A73CF1A004536A2 /* Permutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Permutation.h; sourceTree = "<group>"; };
+		F013E4B92A73CF1A004536A2 /* LPN_Oracle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPN_Oracle.h; sourceTree = "<group>"; };
+		F013E4BA2A73CF1A004536A2 /* LPN_Oracle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LPN_Oracle.cpp; sourceTree = "<group>"; };
+		F013E4BB2A73CF1A004536A2 /* MMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMT.h; sourceTree = "<group>"; };
+		F013E4BC2A73CF1A004536A2 /* MMT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MMT.cpp; sourceTree = "<group>"; };
+		F013E4BD2A73CF1A004536A2 /* Permutation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Permutation.cpp; sourceTree = "<group>"; };
+		F013E4BF2A73CF1A004536A2 /* Matrixoperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrixoperations.h; sourceTree = "<group>"; };
+		F013E4C02A73CF1A004536A2 /* Matrixoperations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrixoperations.cpp; sourceTree = "<group>"; };
+		F013E4C12A73CF1A004536A2 /* Permutation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Permutation.h; sourceTree = "<group>"; };
+		F013E4C22A73CF1A004536A2 /* LPN_Oracle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPN_Oracle.h; sourceTree = "<group>"; };
+		F013E4C32A73CF1A004536A2 /* LPN_Oracle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LPN_Oracle.cpp; sourceTree = "<group>"; };
+		F013E4C42A73CF1A004536A2 /* MMT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMT.h; sourceTree = "<group>"; };
+		F013E4C52A73CF1A004536A2 /* MMT.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MMT.cpp; sourceTree = "<group>"; };
+		F013E4C62A73CF1A004536A2 /* Permutation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Permutation.cpp; sourceTree = "<group>"; };
+		F013E4C72A73CF1A004536A2 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F013E4C82A73CF1A004536A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F013E4C92A73CF1A004536A2 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F013E4CA2A73CF1A004536A2 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		F013E4CC2A73CF1A004536A2 /* LPN_Oracle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPN_Oracle.h; sourceTree = "<group>"; };
+		F013E4CD2A73CF1A004536A2 /* Sampling_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sampling_Test.h; sourceTree = "<group>"; };
+		F013E4CE2A73CF1A004536A2 /* LPN_Oracle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LPN_Oracle.cpp; sourceTree = "<group>"; };
+		F013E4CF2A73CF1A004536A2 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F013E4D02A73CF1A004536A2 /* Sampling_Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sampling_Test.cpp; sourceTree = "<group>"; };
+		F013E4DF2A78B99F004536A2 /* test1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test1.c; sourceTree = "<group>"; };
 		F0352F202A42ABB200D6544A /* mutiErrorsTest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = mutiErrorsTest.c; sourceTree = "<group>"; };
 		F0352F232A4CF9E700D6544A /* bch_codec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bch_codec.h; sourceTree = "<group>"; };
 		F0352F242A4CF9E700D6544A /* bch_codec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bch_codec.c; sourceTree = "<group>"; };
@@ -73,6 +148,7 @@
 		F06351F12A16527000203E85 /* read_files.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = read_files.c; sourceTree = "<group>"; };
 		F06351F32A1652BE00203E85 /* berVec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = berVec.c; sourceTree = "<group>"; };
 		F06F45C82A61634C001598E5 /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
+		F06F45CA2A6623FE001598E5 /* testForPy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testForPy.c; sourceTree = "<group>"; };
 		F085831C2A1711D200E03905 /* keyGenAndED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = keyGenAndED.h; sourceTree = "<group>"; };
 		F085831D2A1711D200E03905 /* keyGenAndED.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = keyGenAndED.c; sourceTree = "<group>"; };
 		F085831F2A1721F500E03905 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
@@ -114,6 +190,126 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F013E48F2A6F6BAC004536A2 /* CCA_Secure */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4992A6F6F7B004536A2 /* bch.c */,
+				F013E4932A6F6F7B004536A2 /* bch.h */,
+				F013E4982A6F6F7B004536A2 /* BerParameter.c */,
+				F013E49C2A6F6F7C004536A2 /* BerParameter.h */,
+				F013E49D2A6F6F7C004536A2 /* calculation.c */,
+				F013E49B2A6F6F7C004536A2 /* calculation.h */,
+				F013E4972A6F6F7B004536A2 /* CCASystem.c */,
+				F013E4912A6F6F7B004536A2 /* CCASystem.h */,
+				F013E4962A6F6F7B004536A2 /* config.h */,
+				F013E49A2A6F6F7C004536A2 /* read_files.c */,
+				F013E4952A6F6F7B004536A2 /* read_files.h */,
+				F013E4922A6F6F7B004536A2 /* SeedGen.c */,
+				F013E4942A6F6F7B004536A2 /* SeedGen.h */,
+				F013E4A42A6F6FAE004536A2 /* seedtest.c */,
+				F013E4DF2A78B99F004536A2 /* test1.c */,
+			);
+			path = CCA_Secure;
+			sourceTree = "<group>";
+		};
+		F013E4A62A73CEBF004536A2 /* testingCode */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4A72A73CF1A004536A2 /* LPN-decoded-master */,
+			);
+			path = testingCode;
+			sourceTree = "<group>";
+		};
+		F013E4A72A73CF1A004536A2 /* LPN-decoded-master */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4A82A73CF1A004536A2 /* BKW reduction */,
+				F013E4AE2A73CF1A004536A2 /* Gaussian algorithm */,
+				F013E4B42A73CF1A004536A2 /* MMT */,
+				F013E4C82A73CF1A004536A2 /* README.md */,
+				F013E4C92A73CF1A004536A2 /* .gitignore */,
+				F013E4CA2A73CF1A004536A2 /* .gitattributes */,
+				F013E4CB2A73CF1A004536A2 /* Well-pool generation */,
+			);
+			path = "LPN-decoded-master";
+			sourceTree = "<group>";
+		};
+		F013E4A82A73CF1A004536A2 /* BKW reduction */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4A92A73CF1A004536A2 /* LPN_Oracle.h */,
+				F013E4AA2A73CF1A004536A2 /* LPN_Oracle.cpp */,
+				F013E4AB2A73CF1A004536A2 /* BKW-reduction.h */,
+				F013E4AC2A73CF1A004536A2 /* Readme.txt */,
+				F013E4AD2A73CF1A004536A2 /* BKW-reduction.cpp */,
+			);
+			path = "BKW reduction";
+			sourceTree = "<group>";
+		};
+		F013E4AE2A73CF1A004536A2 /* Gaussian algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4AF2A73CF1A004536A2 /* Prange.h */,
+				F013E4B02A73CF1A004536A2 /* Prange.cpp */,
+				F013E4B12A73CF1A004536A2 /* LPN_Oracle.h */,
+				F013E4B22A73CF1A004536A2 /* LPN_Oracle.cpp */,
+				F013E4B32A73CF1A004536A2 /* Readme.txt */,
+			);
+			path = "Gaussian algorithm";
+			sourceTree = "<group>";
+		};
+		F013E4B42A73CF1A004536A2 /* MMT */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4B52A73CF1A004536A2 /* hashmap */,
+				F013E4BE2A73CF1A004536A2 /* sorted lists */,
+				F013E4C72A73CF1A004536A2 /* Readme.txt */,
+			);
+			path = MMT;
+			sourceTree = "<group>";
+		};
+		F013E4B52A73CF1A004536A2 /* hashmap */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4B62A73CF1A004536A2 /* Matrixoperations.h */,
+				F013E4B72A73CF1A004536A2 /* Matrixoperations.cpp */,
+				F013E4B82A73CF1A004536A2 /* Permutation.h */,
+				F013E4B92A73CF1A004536A2 /* LPN_Oracle.h */,
+				F013E4BA2A73CF1A004536A2 /* LPN_Oracle.cpp */,
+				F013E4BB2A73CF1A004536A2 /* MMT.h */,
+				F013E4BC2A73CF1A004536A2 /* MMT.cpp */,
+				F013E4BD2A73CF1A004536A2 /* Permutation.cpp */,
+			);
+			path = hashmap;
+			sourceTree = "<group>";
+		};
+		F013E4BE2A73CF1A004536A2 /* sorted lists */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4BF2A73CF1A004536A2 /* Matrixoperations.h */,
+				F013E4C02A73CF1A004536A2 /* Matrixoperations.cpp */,
+				F013E4C12A73CF1A004536A2 /* Permutation.h */,
+				F013E4C22A73CF1A004536A2 /* LPN_Oracle.h */,
+				F013E4C32A73CF1A004536A2 /* LPN_Oracle.cpp */,
+				F013E4C42A73CF1A004536A2 /* MMT.h */,
+				F013E4C52A73CF1A004536A2 /* MMT.cpp */,
+				F013E4C62A73CF1A004536A2 /* Permutation.cpp */,
+			);
+			path = "sorted lists";
+			sourceTree = "<group>";
+		};
+		F013E4CB2A73CF1A004536A2 /* Well-pool generation */ = {
+			isa = PBXGroup;
+			children = (
+				F013E4CC2A73CF1A004536A2 /* LPN_Oracle.h */,
+				F013E4CD2A73CF1A004536A2 /* Sampling_Test.h */,
+				F013E4CE2A73CF1A004536A2 /* LPN_Oracle.cpp */,
+				F013E4CF2A73CF1A004536A2 /* Readme.txt */,
+				F013E4D02A73CF1A004536A2 /* Sampling_Test.cpp */,
+			);
+			path = "Well-pool generation";
+			sourceTree = "<group>";
+		};
 		F0352F222A4CF9C600D6544A /* BCH */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +365,8 @@
 				F04E0F9B2A5E208D00F13A17 /* read_files.h */,
 				F04E0F9C2A5E208D00F13A17 /* read_files.c */,
 				F06F45C82A61634C001598E5 /* test.c */,
+				F06F45CA2A6623FE001598E5 /* testForPy.c */,
+				F013E4752A677743004536A2 /* testBer.c */,
 			);
 			path = CPA_Secure;
 			sourceTree = "<group>";
@@ -201,6 +399,8 @@
 		F0FB4B442A0DD76400EEFA7F = {
 			isa = PBXGroup;
 			children = (
+				F013E4A62A73CEBF004536A2 /* testingCode */,
+				F013E48F2A6F6BAC004536A2 /* CCA_Secure */,
 				F0E84ECC2A5CF1AA00D9CBAF /* original_LPN */,
 				F0E84EC42A5AB03E00D9CBAF /* CPA_Secure */,
 				F0352F222A4CF9C600D6544A /* BCH */,
@@ -275,33 +475,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F013E4DE2A73CF1A004536A2 /* Sampling_Test.cpp in Sources */,
+				F013E4D22A73CF1A004536A2 /* BKW-reduction.cpp in Sources */,
+				F013E4A52A6F6FAE004536A2 /* seedtest.c in Sources */,
+				F013E4D42A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */,
+				F06F45CB2A6623FE001598E5 /* testForPy.c in Sources */,
 				F0E84ED52A5D06BC00D9CBAF /* bch.c in Sources */,
 				F0352F252A4CF9E700D6544A /* bch_codec.c in Sources */,
 				F0FB4B5E2A0DDC7900EEFA7F /* PRNG_Seed.c in Sources */,
 				F0352F292A4E48C200D6544A /* testErrors.c in Sources */,
 				F057AD862A3F1358004462D5 /* crcgen.c in Sources */,
 				F06351F22A16527000203E85 /* read_files.c in Sources */,
+				F013E4D12A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */,
 				F0E84ECA2A5CED1E00D9CBAF /* SeedGen.c in Sources */,
 				F0E84EC72A5AB06F00D9CBAF /* CPASystem.c in Sources */,
+				F013E4D92A73CF1A004536A2 /* Matrixoperations.cpp in Sources */,
+				F013E4DA2A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */,
 				F0352F2B2A4E604300D6544A /* test.cc in Sources */,
 				F057AD882A3F138C004462D5 /* berlekamp.c in Sources */,
+				F013E4D32A73CF1A004536A2 /* Prange.cpp in Sources */,
 				F05C1B962A305FC90008AC66 /* errorCorrectCodeTest.c in Sources */,
 				F04E0F9D2A5E208D00F13A17 /* read_files.c in Sources */,
+				F013E4D82A73CF1A004536A2 /* Permutation.cpp in Sources */,
 				F06F45C92A61634C001598E5 /* test.c in Sources */,
 				F0958A0A2A1616E00041F76C /* EncAndDec.c in Sources */,
 				F05C1B992A31EDD70008AC66 /* encoding.c in Sources */,
 				F057AD8A2A3F1B90004462D5 /* test.c in Sources */,
+				F013E4762A677743004536A2 /* testBer.c in Sources */,
 				F0E84EC32A53D2F900D9CBAF /* bch.c in Sources */,
+				F013E4D72A73CF1A004536A2 /* MMT.cpp in Sources */,
+				F013E4DB2A73CF1A004536A2 /* MMT.cpp in Sources */,
+				F013E4A32A6F6F7C004536A2 /* calculation.c in Sources */,
+				F013E4A22A6F6F7C004536A2 /* read_files.c in Sources */,
 				F08583212A1721F500E03905 /* test.c in Sources */,
+				F013E4DC2A73CF1A004536A2 /* Permutation.cpp in Sources */,
 				F057AD822A3F0DAD004462D5 /* rs.c in Sources */,
+				F013E49E2A6F6F7C004536A2 /* SeedGen.c in Sources */,
+				F013E4DD2A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */,
+				F013E4D52A73CF1A004536A2 /* Matrixoperations.cpp in Sources */,
+				F013E4D62A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */,
 				F0FB4B592A0DD96900EEFA7F /* PubKeyGen.c in Sources */,
 				F0FB4B512A0DD76400EEFA7F /* main.c in Sources */,
 				F057AD842A3F132A004462D5 /* galois.c in Sources */,
+				F013E4A02A6F6F7C004536A2 /* BerParameter.c in Sources */,
+				F013E4A12A6F6F7C004536A2 /* bch.c in Sources */,
 				F085831E2A1711D200E03905 /* keyGenAndED.c in Sources */,
 				F0352F212A42ABB200D6544A /* mutiErrorsTest.c in Sources */,
+				F013E49F2A6F6F7C004536A2 /* CCASystem.c in Sources */,
 				F0E84ED22A5D007700D9CBAF /* calculation.c in Sources */,
 				F06351F42A1652BE00203E85 /* berVec.c in Sources */,
 				F0352F272A4CFA4100D6544A /* BCHtest.c in Sources */,
+				F013E4E02A78B99F004536A2 /* test1.c in Sources */,
 				F0E84ECF2A5CF68300D9CBAF /* BerParameter.c in Sources */,
 				F06351F02A1651E000203E85 /* calculation.c in Sources */,
 			);

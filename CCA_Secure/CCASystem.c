@@ -1,3 +1,4 @@
+#include "CCASystem.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -7,17 +8,20 @@
 #include "BerParameter.h"
 #include "read_files.h"
 #include "calculation.h"
-#include "CPASystem.h"
 #include "bch.h"
-
+#include <openssl/rand.h>
 #define N N_VALUE
 #define M M_VALUE
 //#define T T_VALUE
 #define L L_VALUE
 #define K K_VALUE
 
-//clang -o CPA CPASystem.c SeedGen.c BerParameter.c bch.c read_files.c calculation.c -I/opt/homebrew/opt/openssl@3/include -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
-//       ./CPA
+//clang -o CCA CPASystem.c SeedGen.c BerParameter.c bch.c read_files.c calculation.c -I/opt/homebrew/opt/openssl@3/include -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
+//       ./CCA
+
+
+// Function to print binary
+
 
 
 int main() {
@@ -33,7 +37,7 @@ int main() {
     
     // print matrix
     printf("Matrix A:\n");
-    //print_matrix(N, M, matrixA);
+    print_matrix(N, M, matrixA);
     
     //generate S Z^(n x l)_2;
     unsigned char **matrixS = generateBinaryMatrix(N, L);
@@ -47,12 +51,12 @@ int main() {
     unsigned char **E = generateBernoulliMatrix(M,L);
     
     printf("Matrix E:\n");
-     //print_matrix(M, L, E);
+     print_matrix(M, L, E);
     
     //ET  L x M
     unsigned char **ET = generateTransposeMatrix(E, M, L);
     printf("Matrix ET:\n");
-    //print_matrix(L, M, ET);
+    print_matrix(L, M, ET);
     
     //ST L x N
     unsigned char **ST = generateTransposeMatrix(matrixS, N, L);
@@ -287,3 +291,4 @@ int main() {
     return errorCount;
     
 }
+

@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -10,59 +11,59 @@
 #include "CPASystem.h"
 #include "bch.h"
 
+
 #define N N_VALUE
 #define M M_VALUE
 //#define T T_VALUE
 #define L L_VALUE
 #define K K_VALUE
 
-//clang -o CPA CPASystem.c SeedGen.c BerParameter.c bch.c read_files.c calculation.c -I/opt/homebrew/opt/openssl@3/include -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
-//       ./CPA
-
+//clang -o testForPy testForPy.c SeedGen.c BerParameter.c bch.c read_files.c calculation.c -I/opt/homebrew/opt/openssl@3/include -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
+//CPA
 
 int main() {
-        
+
     const char *seed_file_path = "/Users/qh/Documents/projects/LPN/LPN/CPA_Secure/Seeds/seed.txt";
     
     unsigned int seed = read_seed_from_file(seed_file_path);
-    printf("Seed from file: %u\n", seed);
+    //printf("Seed from file: %u\n", seed);
     srand(seed);
     
     //generate A Z^(n x m)_2;
     unsigned char **matrixA = generateBinaryMatrix(N, M);
     
     // print matrix
-    printf("Matrix A:\n");
-    //print_matrix(N, M, matrixA);
+//    printf("Matrix A:\n");
+//    print_matrix(N, M, matrixA);
     
     //generate S Z^(n x l)_2;
     unsigned char **matrixS = generateBinaryMatrix(N, L);
     
     // print matrix
-    printf("Matrix S:\n");
+    //printf("Matrix S:\n");
     //print_matrix(N, L, matrixS);
     
     
     //generate Ber E Z^(m x L)_t;
     unsigned char **E = generateBernoulliMatrix(M,L);
     
-    printf("Matrix E:\n");
-     //print_matrix(M, L, E);
+//    printf("Matrix E:\n");
+//     print_matrix(M, L, E);
     
     //ET  L x M
     unsigned char **ET = generateTransposeMatrix(E, M, L);
-    printf("Matrix ET:\n");
-    //print_matrix(L, M, ET);
+//    printf("Matrix ET:\n");
+//    print_matrix(L, M, ET);
     
     //ST L x N
     unsigned char **ST = generateTransposeMatrix(matrixS, N, L);
-    printf("Matrix ST:\n");
+//    printf("Matrix ST:\n");
     //print_matrix(L, N, ST);
     
     //S^T A L行M列
     unsigned char **STA = multiply_matrices(ST, L, N, matrixA, N, M);
     
-    printf("Matrix STA:\n");
+    //printf("Matrix STA:\n");
     //print_matrix(L, M, STA);
     
     //B^T L行M列
@@ -70,7 +71,7 @@ int main() {
     if (BT == NULL) {
         printf("Failed to allocate memory for BT\n");
         exit(1);
-    }else{printf("pass:\n");};
+    };
     
     for (int i = 0; i < L; i++) {
         BT[i] = (unsigned char *)malloc(M * sizeof(unsigned char));
@@ -83,8 +84,8 @@ int main() {
     //STA L M, ET四列八行，+ BT 八行四列
     //应该是E
     add_matrices(STA, ET, BT, L, M);
-    printf("Matrix BT:\n");
-    print_matrix(L, M, BT);
+    //printf("Matrix BT:\n");
+    //print_matrix(L, M, BT);
     //B
     //unsigned char **B = generateTransposeMatrix(BT, L, M);
     //printf("Matrix B:\n");
@@ -116,13 +117,13 @@ int main() {
     /* to get encoded message  but how many bits ?????????????????? I define it as L*/
     unsigned char *encodedMessage = encode_bch(message);
     
-    printf("r(x) = (this is encoded message )\n");
-    for (i = 0; i < length; i++) {
-        printf("%1d ", recd[i]);
-//        if (i && (((i+1) % 8) == 0))
-//            printf(" ");
-    }
-    printf("\n");
+//    printf("r(x) = (this is encoded message )\n");
+//    for (i = 0; i < length; i++) {
+//        printf("%1d ", recd[i]);
+////        if (i && (((i+1) % 8) == 0))
+////            printf(" ");
+//    }
+//    printf("\n");
     
 //    printf("encoded Message is:\n");
 //
@@ -150,9 +151,11 @@ int main() {
     }
     matrix_vector_multiplication(ET, L, M, vector_r, Er);
     
-    printf("Er is:\n");
+    //printf("Er is:\n");
     
-    print_vector(Er, L);
+    //print_vector(Er, L);
+    
+    
     
     //Calculate B^T*r B^T L行M列
     unsigned char *BTr = (unsigned char *)malloc(L * sizeof(unsigned char));
@@ -161,7 +164,7 @@ int main() {
         exit(1);
     }
     
-    
+  
     
     matrix_vector_multiplication(BT, L, M, vector_r, BTr);
     
@@ -174,37 +177,19 @@ int main() {
     
     add_vectors(BTr,encodedMessage, C1, L);
     
-    printf("C1 is:\n");
+    //printf("C1 is:\n");
     
-    print_vector(C1, L);
+    //print_vector(C1, L);
     
-    printf("r is:\n");
+    //printf("r is:\n");
     
-    print_vector(vector_r, M);
+    //print_vector(vector_r, M);
     
 
     
     //decryption
-    printf("Now, Decryption.\n");
-    printf("Original Message is:\n");
-    
-    print_vector(message, N);
-    
-    printf("BTr is:(BTr + encoded message = C1)\n");
-    
-    print_vector(BTr, L);
-    
-    printf("encoded Message is:\n");
-    
-    print_vector(encodedMessage, L);
-    
-    printf("C1 is:\n");
-    
-    print_vector(C1, L);
-    
+   
 
-    
-    
     
     //m ← Decode(C1 + S⊺C0）
     
@@ -225,23 +210,25 @@ int main() {
     add_vectors(C1,STC0, receivedM, L);
     
     
-    printf("received Message is:\n");
-    
-    print_vector(receivedM, L);
+//    printf("received Message is:\n");
+//
+//    print_vector(receivedM, L);
     
     //decode received message
     int errorCount;
     unsigned char *decodedM = decode_bch(receivedM, L,&errorCount);
     
-    if (decodedM == NULL) {
-        printf("Decoding failed.\n");
-    }
+    printf("Error count: %d\n", errorCount);
     
-    printf("Original Message is:\n");
-    print_vector(message, N);
+//    if (decodedM == NULL) {
+//        printf("Decoding failed.\n");
+//    }
     
-    printf("decoded Message is:\n");
-    print_vector(decodedM, N);
+//    printf("Original Message is:\n");
+//    print_vector(message, N);
+//
+//    printf("decoded Message is:\n");
+//    print_vector(decodedM, N);
     
     
     int is_same = (memcmp(decodedM, message, N) == 0);
@@ -249,10 +236,8 @@ int main() {
     if (is_same){
         printf("Decoding successfully!!!!!!!!!\n");
     }else{
-        printf("Decoding fail.\n");
+        printf("Decoding fail........\n");
     };
-    
-    printf("Error count: %d\n", errorCount);
     
     // Free memory
     for (int i = 0; i < N; i++) {
@@ -261,6 +246,7 @@ int main() {
     }
     free(matrixA);
     free(matrixS);
+    
 //    for (int i = 0; i < L; i++) {
 //        free(E[i]);
 //        free(ET[i]);
@@ -283,7 +269,7 @@ int main() {
     free(receivedM);
     free(decodedM);
     free(message);
-
+    
     return errorCount;
     
 }

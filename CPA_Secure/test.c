@@ -108,7 +108,8 @@ int main(){
     printf("\n");
     
     //decode received message
-    unsigned char *decodedMessage = decode_bch(receivedMesssage, L);
+    int errorCount;
+    unsigned char *decodedMessage = decode_bch(receivedMesssage,L,&errorCount);
     
     printf("message is:\n");
     

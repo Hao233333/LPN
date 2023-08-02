@@ -14,8 +14,6 @@
 
 unsigned int lcg_seed;
 
-unsigned int lcg_rand(void);
-
 
 void seed_lcg(unsigned int seed) {
     lcg_seed = seed;
@@ -55,7 +53,7 @@ int seed(void) {
     srand(seed);
 
     // save the seed to the file
-    const char *seed_file_path = "/Users/qh/Documents/projects/LPN/LPN/CPA_Secure/Seeds/seed.txt";
+    const char *seed_file_path = "/Users/qh/Documents/projects/LPN/LPN/CCA_Secure/Seeds/seed.txt";
     save_seed_to_file(seed, seed_file_path);
     
 

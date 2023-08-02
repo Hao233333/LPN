@@ -49,7 +49,7 @@ int PubKeyGen(void) {
     printf("Matrix T:\n");
     print_matrix(cols, cols, T);
 
-    unsigned char **U = multiply_matrices(matrixA, T, rows, cols);
+    unsigned char **U = multiply_matrices(matrixA, rows, cols,T,rows, cols);
     
     printf("Matrix U:\n");
     print_matrix(rows, cols, U);
