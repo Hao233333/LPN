@@ -10,6 +10,10 @@ void generate_binary_vector(unsigned char *vector, int length);
 
 //matrix vector multiplication
 void matrix_vector_multiplication(unsigned char **matrix, int rows, int cols, unsigned char *vector, unsigned char *result);
+
+void matrix_vector_multiplication2(unsigned char **matrix, int rows, int cols, unsigned char *vector, unsigned char *result);
+
+    
 //calculate y=sA+e
 void add_vectors(unsigned char *vector1, unsigned char *vector2, unsigned char *result, int length);
 

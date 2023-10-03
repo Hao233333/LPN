@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
 	auto duration = std::chrono::duration_cast<std::chrono::seconds>(t2 - t1).count();
 
 
-	std::cout << "\nDuration (seconds): " << ((double)duration);
+	std::cout << "\nDuration seconds): " << ((double)duration);
 	std::cout << "\nsampling took (cpu-time):" << T_ELAPSED << "\n";
 	printf("\nfinished");
 

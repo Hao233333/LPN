@@ -41,7 +41,7 @@ unsigned char *generate_Rvector(const unsigned char* message, int num_bits, int 
     memcpy(temp_message, message, num_bytes);
 
     while (result_length < m) {
-        // 哈希消息
+        // hash
         SHA256(temp_message, num_bytes, hash);
 
         for (int i = 0; i < 32 && result_length < m; i++) {

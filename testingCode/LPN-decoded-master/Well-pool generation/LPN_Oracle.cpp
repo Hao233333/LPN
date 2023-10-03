@@ -1,4 +1,3 @@
-
 #include "LPN_Oracle.h"
 
 time_t t;
@@ -10,7 +9,6 @@ std::uniform_int_distribution<uint64_t> uint_dist;
 std::vector<std::bernoulli_distribution> ber_dists;
 std::vector<std::mt19937_64> random_engines;
 std::vector<std::uniform_int_distribution<uint64_t>> dists;
-
 
 std::bernoulli_distribution ber(p);
 uint64_t * secret = new uint64_t[int_per_row];

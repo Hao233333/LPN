@@ -81,6 +81,8 @@
 #include "bch.h"
 //change m to another
 int             m=9, n, length = 490, k, t = 28, d;
+//int             m=11, n, length = 2038, k, t = 247, d;
+//int             m=11, n, length = 2042, k, t = 365, d;
 int             p[21];
 int             alpha_to[1048576], index_of[1048576], g[548576];
 int             recd[1048576], data[1048576], bb[548576];
@@ -290,13 +292,13 @@ gen_poly(void)
                 g[jj] = g[jj - 1];
         g[0] = alpha_to[(index_of[g[0]] + zeros[ii]) % n];
     }
-    printf("Generator polynomial:\ng(x) = \n");
-    for (ii = 0; ii <= rdncy; ii++) {
-        printf("%d", g[ii]);
-        if (ii && (((ii+1) %8 ) == 0))
-            printf(" ");
-    }
-    printf("\n");
+//    printf("Generator polynomial:\ng(x) = \n");
+//    for (ii = 0; ii <= rdncy; ii++) {
+//        printf("%d", g[ii]);
+//        if (ii && (((ii+1) %8 ) == 0))
+//            printf(" ");
+//    }
+//    printf("\n");
     
 }
 
@@ -333,13 +335,13 @@ unsigned char* encode_bch(unsigned char *data)//参数修改
         recd[i] = bb[i];
     for (i = 0; i < k; i++)
         recd[i + length - k] = data[i];
-    printf("Code polynomial:\nc(x) = \n");
-    for (i = 0; i < length; i++) {
-        printf("%1d", recd[i]);
-        if (i && (((i+1) % 8) == 0))
-            printf(" ");
-    }
-    printf("\n");
+//    printf("Code polynomial:\nc(x) = \n");
+//    for (i = 0; i < length; i++) {
+//        printf("%1d", recd[i]);
+//        if (i && (((i+1) % 8) == 0))
+//            printf(" ");
+//    }
+//    printf("\n");
     
     // 创建 encodedMessage 变量
     unsigned char *encodedMessage = malloc(length * sizeof(unsigned char));
@@ -433,7 +435,7 @@ unsigned char* decode_bch(unsigned char* message, int L, int *errorCount)
     //    printf("\n");
     //--------
     /* first form the syndromes */
-    printf("S(x) = \n");
+//    printf("S(x) = \n");
     for (i = 1; i <= t2; i++) {
         s[i] = 0;
         for (j = 0; j < length; j++)
@@ -447,9 +449,9 @@ unsigned char* decode_bch(unsigned char* message, int L, int *errorCount)
          */
         /* convert syndrome from polynomial form to index form  */
         s[i] = index_of[s[i]];
-        printf("%3d ", s[i]);
+//        printf("%3d ", s[i]);
     }
-    printf("\n");
+//    printf("\n");
     
     
     // Allocate memory for the result new added+++++++++++++++++++++++++

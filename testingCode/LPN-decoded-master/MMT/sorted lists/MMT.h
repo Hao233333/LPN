@@ -1,5 +1,4 @@
 #pragma once
-
 #ifndef BJMM
 #define BJMM
 #include "Matrixoperations.h"
@@ -7,8 +6,8 @@
 #include "Permutation.h"
 
 //LPN parameters
-static const int k = 128;
-static const double tau = 0.125;
+static const int k = 256;
+static const double tau = 0.05;
 
 //optimization parameters
 static const int l = 24;

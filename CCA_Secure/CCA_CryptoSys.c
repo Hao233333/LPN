@@ -1,7 +1,16 @@
 
 
-//clang -o seedtest seedtest.c SeedGen.c BerParameter.c bch.c read_files.c calculation.c -I/opt/homebrew/opt/openssl@3/include -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
-// ./seedtest
+//clang -o CCA256 CCA_CryptoSys.c SeedGen.c BerParameter.c bch.c read_files.c calculation.c -I/opt/homebrew/opt/openssl@3/include -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
+// ./CCA256
+
+
+//clang -o CCA256 CCA_CryptoSys.c SeedGen.c BerParameter.c bch.c read_files.c calculation.c \
+-I/opt/homebrew/opt/openssl@3/include \
+-I/usr/local/include \
+-L/opt/homebrew/opt/openssl@3/lib \
+-L/opt/homebrew/Cellar/libomp/17.0.1/lib \
+-lssl -lcrypto -Xpreprocessor -fopenmp -lomp
+// ./CCA256
 
 // control command e 相同字段全选
 #include <stdio.h>
@@ -45,24 +54,20 @@ unsigned char* generate_binary_message(int v) {
     }
 }
 
-unsigned int sha256t_hash32(unsigned char *data, size_t len) {
-    unsigned char hash[SHA256_DIGEST_LENGTH];
-    SHA256(data, len, hash);
+
+
+void check_length(unsigned char array[], int expected_length) {
+    int count = 0;
+
+    for (int i = 0; i < expected_length; i++) {
+        // 增加计数值
+        count++;
+    }
+
+    printf("Actual length: %d\n", count);
+    printf("Expected length: %d\n", expected_length);
     
-    // Use the first 32 bits of the hash as the result
-    unsigned int hash32 = *(unsigned int *)hash;
-    return hash32;
-}
-
-void check_length(unsigned char* vector, int expected_length) {
-    assert(vector != NULL);  // Check that the vector is not NULL
-
-    // Calculate the length of the vector
-    int actual_length = strlen((char*)vector);
-    printf("Actual length: %d\n", actual_length);
-        printf("Expected length: %d\n", expected_length);
-    // If the actual length is not the same as the expected length, assert will terminate the program
-    assert(actual_length == expected_length);
+    assert(count == expected_length);
 }
 
 
@@ -144,14 +149,14 @@ int main() {
     //print_matrix(M, L, B);
     
 
-    //KEM.Ecap(Pk)
+    //KEM.Ecap(Pk) start
     int m_length = K; // Specify the desired m length in bits = 256 bits
 //    unsigned char* m = generate_binary_message(m_length);
 //
-    unsigned char *m = (unsigned char *)malloc(m_length * sizeof(unsigned char));
-    generate_binary_vector(m, m_length);
+    unsigned char *message = (unsigned char *)malloc(m_length * sizeof(unsigned char));
+    generate_binary_vector(message, m_length);
     
-    unsigned char *vector_r = generate_Rvector(m, m_length, M);
+    unsigned char *vector_r = generate_Rvector(message, m_length, M);
     
     printf("r:\n");
     print_vector(vector_r, M);
@@ -163,14 +168,13 @@ int main() {
     extern int alpha_to[1048576], index_of[1048576], g[548576];
     extern int recd[1048576], data[1048576], bb[548576];
     extern int numerr, errpos[1024], decerror;
-    read_p();               /* Read m */
-    generate_gf();          /* Construct the Galois Field GF(2**m) */
-    gen_poly();             /* Compute the generator polynomial of BCH code */
-    
+    read_p();/* Read m */
+    generate_gf();/* Construct the Galois Field GF(2**m) */
+    gen_poly();
+ 
     /* to get encoded message  but how many bits ?????????????????? I define it as L*/
-    unsigned char *encodedMessage = encode_bch(m);
+    unsigned char *encodedMessage = encode_bch(message);
     
-    printf("r(x) = (this is encoded message)\n");
     for (i = 0; i < length; i++) {
         printf("%1d ", recd[i]);
 //        if (i && (((i+1) % 8) == 0))
@@ -191,8 +195,12 @@ int main() {
         printf("Error: Unable to allocate memory for the result vector\n");
         exit(1);
     }
+
     matrix_vector_multiplication(matrixA, N, M, vector_r, C0);
     
+    unsigned char arrayC0[N];
+    memcpy(arrayC0, C0, N * sizeof(unsigned char));
+
     
     //Calculate B^T*r B^T L行M列
     unsigned char *BTr = (unsigned char *)malloc(L * sizeof(unsigned char));
@@ -201,15 +209,11 @@ int main() {
         exit(1);
     }
     
-    matrix_vector_multiplication(BT, L, M, vector_r, BTr);
+    matrix_vector_multiplication2(BT, L, M, vector_r, BTr);
     
     //C1 = B^Tr + encodedMessage, length = L
-    unsigned char *C1 = (unsigned char *)malloc(L * sizeof(unsigned char));
-    if (C1 == NULL) {
-        printf("Error: Unable to allocate memory for the result vector\n");
-        exit(1);
-    }
-    
+
+    unsigned char C1[L];
     add_vectors(BTr,encodedMessage, C1, L);
     printf(" BTr is:\n");
     
@@ -219,19 +223,17 @@ int main() {
     
     print_vector(C1, L);
     
-    //加一个常数sha256对64个0的参数-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    //unsigned char *LM = append_zeros(m,m_length,64);
-    
-    // Use SHA-256 to hash Lm =  H'(m)
-    unsigned char C2[SHA256_DIGEST_LENGTH];
-    SHA256(m, K / 8, C2);
 
-    printf("SHA-256 C2: \n");
-    print_binary(C2, SHA256_DIGEST_LENGTH);
+    // Use SHA-256 to hash Lm =  H'(m)
+    unsigned char C2[SHA512_DIGEST_LENGTH];
+    SHA512(message, K / 8, C2);
+
+    printf("SHA-512 C2: \n");
+    print_binary(C2, SHA512_DIGEST_LENGTH);
     
     // Use SHA-256 to hash Km =  H(m) session key
     unsigned char KM[SHA256_DIGEST_LENGTH];
-    SHA256(m, m_length / 8, KM);
+    SHA256(message, m_length / 8, KM);
 
     printf("SHA-256 K: \n");
     print_binary(KM, SHA256_DIGEST_LENGTH);
@@ -239,15 +241,15 @@ int main() {
     
     
     //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-    //KEY Decap
+    //KEY Decap start
     //=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     // Function to check the length of a binary vector
-//    printf("C0 \n");
-//    check_length(C0, N);
-//    printf("C1 \n");
-//    check_length(C1, L);
-//    printf("C2 \n");
-//    check_length(C2, SHA256_DIGEST_LENGTH);
+    printf("C0 \n");
+    check_length(arrayC0, N);
+    printf("C1 \n");
+    check_length(C1, L);
+    printf("C2 \n");
+    check_length(C2, SHA512_DIGEST_LENGTH);
     
     //m ← Decode(C1 + S⊺C0）
     
@@ -282,7 +284,7 @@ int main() {
     }
     
     printf("Original Message is:\n");
-    print_vector(m, m_length);
+    print_vector(message, m_length);
     
     printf("Decoded Message is:\n");
     print_vector(decodedM, m_length);
@@ -328,9 +330,17 @@ int main() {
         printf("Error: Unable to allocate memory for the result vector\n");
         exit(1);
     }
-    matrix_vector_multiplication(matrixA, N, M, vector_r2, C0_2nd);
+    //unsigned char C0_2nd[N];
+    //memset(C0_2nd, 0, sizeof(C0_2nd)); // 初始化为零
+    matrix_vector_multiplication2(matrixA, N, M, vector_r2, C0_2nd);
     
+    unsigned char arrayC0_2nd[N];
+    memcpy(arrayC0_2nd, C0, N * sizeof(unsigned char));
+    printf("C0':\n");
+    print_vector(arrayC0, N);
     
+    printf("C0:\n");
+    print_vector(C0, N);
     
     
     //Calculate B^T*r B^T L行M列
@@ -343,11 +353,12 @@ int main() {
     matrix_vector_multiplication(BT, L, M, vector_r2, BTr2);
     
     //C1 = B^Tr + encodedMessage, length = L
-    unsigned char *C1_2nd = (unsigned char *)malloc(L * sizeof(unsigned char));
-    if (C1_2nd == NULL) {
-        printf("Error: Unable to allocate memory for the result vector\n");
-        exit(1);
-    }
+//    unsigned char *C1_2nd = (unsigned char *)malloc(L * sizeof(unsigned char));
+//    if (C1_2nd == NULL) {
+//        printf("Error: Unable to allocate memory for the result vector\n");
+//        exit(1);
+//    }
+    unsigned char C1_2nd[L];
     
     add_vectors(BTr2,encodedM_2nd, C1_2nd, L);
     
@@ -363,20 +374,20 @@ int main() {
     //unsigned char *LM2 = append_zeros(decodedM,m_length,64);
     
     // Use SHA-256 to hash Lm2 =  H'(m)
-    unsigned char C2_2nd[SHA256_DIGEST_LENGTH];
-    SHA256(decodedM, m_length / 8, C2_2nd);
-
-    printf("SHA-256 C2': \n");
-    print_binary(C2_2nd, SHA256_DIGEST_LENGTH);
+    unsigned char C2_2nd[SHA512_DIGEST_LENGTH];
+    SHA512(decodedM, K / 8, C2_2nd);
     
-    printf("SHA-256 C2: \n");
-    print_binary(C2, SHA256_DIGEST_LENGTH);
+    printf("SHA-512 C2': \n");
+    print_binary(C2_2nd, SHA512_DIGEST_LENGTH);
+    
+    printf("SHA-512 C2: \n");
+    print_binary(C2, SHA512_DIGEST_LENGTH);
     
     
     //compare values
     
     // Compare C2 and C2_2nd
-    if (memcmp(C2, C2_2nd, SHA256_DIGEST_LENGTH) != 0) {
+    if (memcmp(C2, C2_2nd, SHA512_DIGEST_LENGTH) != 0) {
         printf("Decryption unsuccessful: C2 and C2_2nd do not match.\n");
         return 0;
     }
@@ -388,7 +399,7 @@ int main() {
     }
 
     // Compare C0 and C0_2nd
-    if (memcmp(C0, C0_2nd, N) != 0) {
+    if (memcmp(arrayC0, arrayC0_2nd, N) != 0) {
         printf("Decryption unsuccessful: C0 and C0_2nd do not match.\n");
         return 0;
     }
@@ -407,20 +418,21 @@ int main() {
     
 
     // 释放所有动态分配的向量
-    free(m);
+    free(message);
     free(vector_r);
     free(encodedMessage);
-    free(C0);
+
     free(BTr);
-    free(C1);
+//    free(C1);
     free(STC0);
     free(receivedM);
     free(decodedM);
     free(vector_r2);
     free(encodedM_2nd);
+    free(C0);
     free(C0_2nd);
     free(BTr2);
-    free(C1_2nd);
+//    free(C1_2nd);
 //    free(LM);
 //    free(LM2);
 

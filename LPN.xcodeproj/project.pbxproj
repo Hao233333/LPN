@@ -46,6 +46,7 @@
 		F06351F02A1651E000203E85 /* calculation.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351EF2A1651E000203E85 /* calculation.c */; };
 		F06351F22A16527000203E85 /* read_files.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351F12A16527000203E85 /* read_files.c */; };
 		F06351F42A1652BE00203E85 /* berVec.c in Sources */ = {isa = PBXBuildFile; fileRef = F06351F32A1652BE00203E85 /* berVec.c */; };
+		F06D9B252A811EB300B963B0 /* CCA_CryptoSys.c in Sources */ = {isa = PBXBuildFile; fileRef = F06D9B242A811EB300B963B0 /* CCA_CryptoSys.c */; };
 		F06F45C92A61634C001598E5 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = F06F45C82A61634C001598E5 /* test.c */; };
 		F06F45CB2A6623FE001598E5 /* testForPy.c in Sources */ = {isa = PBXBuildFile; fileRef = F06F45CA2A6623FE001598E5 /* testForPy.c */; };
 		F085831E2A1711D200E03905 /* keyGenAndED.c in Sources */ = {isa = PBXBuildFile; fileRef = F085831D2A1711D200E03905 /* keyGenAndED.c */; };
@@ -147,6 +148,8 @@
 		F06351EF2A1651E000203E85 /* calculation.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = calculation.c; sourceTree = "<group>"; };
 		F06351F12A16527000203E85 /* read_files.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = read_files.c; sourceTree = "<group>"; };
 		F06351F32A1652BE00203E85 /* berVec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = berVec.c; sourceTree = "<group>"; };
+		F06D9B232A811EB300B963B0 /* CCA_CryptoSys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCA_CryptoSys.h; sourceTree = "<group>"; };
+		F06D9B242A811EB300B963B0 /* CCA_CryptoSys.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CCA_CryptoSys.c; sourceTree = "<group>"; };
 		F06F45C82A61634C001598E5 /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
 		F06F45CA2A6623FE001598E5 /* testForPy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testForPy.c; sourceTree = "<group>"; };
 		F085831C2A1711D200E03905 /* keyGenAndED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = keyGenAndED.h; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				F013E4942A6F6F7B004536A2 /* SeedGen.h */,
 				F013E4A42A6F6FAE004536A2 /* seedtest.c */,
 				F013E4DF2A78B99F004536A2 /* test1.c */,
+				F06D9B232A811EB300B963B0 /* CCA_CryptoSys.h */,
+				F06D9B242A811EB300B963B0 /* CCA_CryptoSys.c */,
 			);
 			path = CCA_Secure;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				F013E4D42A73CF1A004536A2 /* LPN_Oracle.cpp in Sources */,
 				F06F45CB2A6623FE001598E5 /* testForPy.c in Sources */,
 				F0E84ED52A5D06BC00D9CBAF /* bch.c in Sources */,
+				F06D9B252A811EB300B963B0 /* CCA_CryptoSys.c in Sources */,
 				F0352F252A4CF9E700D6544A /* bch_codec.c in Sources */,
 				F0FB4B5E2A0DDC7900EEFA7F /* PRNG_Seed.c in Sources */,
 				F0352F292A4E48C200D6544A /* testErrors.c in Sources */,
